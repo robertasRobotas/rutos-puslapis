@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "HK Nova";
+  src: url("fonts/hk-nova.woff2") format("woff2"),
+    url("fonts/hk-nova.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "HK Nova", sans-serif;
+}
+
+header {
+  height: 80px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px 10px;
+  box-sizing: border-box; /* paddingas ir borderis nueitu i bendra plocio suma */
+  border-bottom: 1px solid darkgray;
+  margin-bottom: 10px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+h1 {
+  margin-right: 20px;
+  margin-left: 0;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar > div {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.cards-container {
+  display: flex;
+}
+
+.cards-container img {
+  height: 1rem;
+  margin-left: 5px;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+}
+
+.login-container > div {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+button {
+  background-color: black;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+}
+
+button > a {
+  text-decoration: none;
+  color: white;
+}
+
+button > img {
+  margin-left: 5px;
+}
+
+.main_wrapper {
+  background-color: #6eeb9d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text_wrapper {
+  text-align: center;
+  flex: 1;
+  padding: 20px;
+}
+
+.text_wrapper h2 {
+  font-size: 2em;
+}
+
+.img_wrapper {
+  flex: 1.5;
+  padding: 20px;
+  padding-bottom: 0;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.subtext{
+  animation: slideInRight 1.5s ease-in-out forwards;
+
+}
+
+.text_wrapper {
+}
+
+.text_wrapper h2 {
+  animation: slideInLeft 1.5s ease-in-out forwards;
+}
+
+.img_wrapper img {
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
